@@ -255,7 +255,7 @@ impl Plugin for BigBrainPlugin {
             )
                 .chain(),
         )
-        .configure_set(self.cleanup_schedule.dyn_clone(), BigBrainSet::Cleanup)
+        .configure_sets(self.cleanup_schedule.dyn_clone(), BigBrainSet::Cleanup)
         .add_systems(
             self.schedule.dyn_clone(),
             (
